@@ -1,50 +1,165 @@
+
+
 function start () { 
+
+    document.getElementById("intro").innerHTML = "";
+    document.getElementById("a").onclick = part1;
+    document.getElementById("b").onclick = part1;
+    document.getElementById("select").onclick = part1;
+    document.getElementById("start").onclick = part1;
    
-    var newDiv = document.createElement("div"); 
-    var newContent = document.createTextNode("Greetings! Welcome to the great esacpe"); 
-    newDiv.appendChild(newContent);
-    var currentDiv = document.getElementById("div1"); 
-    document.body.insertBefore(newDiv, currentDiv); 
-     
-   
-    var btn1 = document.createElement("button");
-    btn1.innerHTML = "Enter";
-    document.body.appendChild(btn1);
-    btn1.onclick = part1
-    document.body.insertBefore(btn1,currentDiv)
-     
+    const msg = "Welcome to The Great Escape a text adventure by Mike Maquera"
+    const msg2 = "The purpose of the game is simple: Esacpe the mysterious place you find yourself in. "
+    const msg3= "Along the way the you will find all sorts of hazards, traps, and puzzles to traveress. Good Luck!"
+    const msg4 =" Press any button to continue"
+    
+    document.getElementById("text2").innerHTML = msg;
+    document.getElementById("text3").innerHTML= msg2;
+    document.getElementById("text4").innerHTML= msg3;
+    document.getElementById("text5").innerHTML = msg4;
+
+    
+      
   }
   
-  function part1() {
-    var newDiv = document.createElement("div"); 
-    var newContent = document.createTextNode("After falling for what seems like ages. You wake up in a small room, dimly lit only with a torch single on the wall beside a large wooden door. You attempt to open the door, tugging on the cool brass handle, however, When you attempt to pull the handle it resists your effort. locked. You must find a way out.  What do you do?"); 
-    newDiv.appendChild(newContent);
-    var currentDiv = document.getElementById("div1"); 
-    document.body.insertBefore(newDiv, currentDiv); 
-   
-    var btn2 = document.createElement("BUTTON");
-    var btn3 = document.createElement("BUTTON");
-   
-    btn2.innerHTML = "Look at the Torch";
-    btn3.innerHTML = "stare into the key hole";
-    document.body.appendChild(btn2);
-    document.body.appendChild(btn3);
-  }
-    
+function part1 () {
+
+  document.getElementById("b").onclick = part2;
+  document.getElementById("a").onclick = failure;
+
+
+  document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
+
+const msg = "After falling for what seems like ages, You find yourself in a dark, muggy room dimly by a light single torch attached to a wall"
+const msg2 = "to the right of the torch lies a single large wooden door with a brass handle, you pull the handle, its locked, what do you do?"
+const msg3 = "A. Look at the Door, B. Look at the Torch"
+
+    document.getElementById("text2").innerHTML = msg;
+    document.getElementById("text3").innerHTML= msg2;
+    document.getElementById("text4").innerHTML= msg3;
+
   
-  function part2() {
+
+} 
     
+
+  
+function part2 () {
+
+  document.getElementById("a").onclick = left;
+  document.getElementById("b").onclick = right;
+
+
+  document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
+
+  const msg = "You look closer at the torch on the wall, you notice there is a small brass key jammed onto the mount of the torch. You pull it free and unlock the door"
+  const msg2 = "The Door sways open with a loud creak. You enter a dark hallway and several steps later you come to an intersection"  
+  const msg3 = " To your right you hear running water to your left you smell smoke"
+  const msg4 = " which way do you go? A. Left  B. Right"
+    document.getElementById("text1").innerHTML = msg;
+    document.getElementById("text2").innerHTML= msg2;
+    document.getElementById("text3").innerHTML= msg3;
+    document.getElementById("text4").innerHTML= msg4;
     
-    
-  }
+
+}  
+
+
+function right () {
+
+
+  document.getElementById("a").onclick = start();
+  document.getElementById("b").onclick = start() ;
+
+
+  document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
+
+  const msg = "As you start to walk right away from the intersection the ceiling starts to shake and crumble you cannot return to the previous room"
+  const msg2 = " you walk for five minutes along the dark hallway until you come upon a cavern spilt in the middle by a running stream"  
+  const msg3 = " the water is across"
+  const msg4 = " what do you do? A. b."
+    document.getElementById("text1").innerHTML = msg;
+    document.getElementById("text2").innerHTML= msg2;
+    document.getElementById("text3").innerHTML= msg3;
+    document.getElementById("text4").innerHTML= msg4;
+
+
+}
+
+function left () {
+
+  document.getElementById("a").onclick = bridge();
+  document.getElementById("b").onclick = start() ;
+
+
+  document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
+
+  const msg = "As you start to walk right away from the intersection the ceiling starts to shake and crumble you cannot return to the previous room"
+  const msg2 = " you walk for five minutes then you come upon a room lit by a small campfire, besides the campfire there is with a pot by the fire"  
+  const msg3 = "You smell "
+  const msg4 = " what do you do? A. Grab the Pot B. "
+    document.getElementById("text1").innerHTML = msg;
+    document.getElementById("text2").innerHTML= msg2;
+    document.getElementById("text3").innerHTML= msg3;
+    document.getElementById("text4").innerHTML= msg4;
+
+
+}
+
+
+function bridge () {
+
+
+  document.getElementById("a").onclick = start();
+  document.getElementById("b").onclick = start() ;
+
+
+  document.getElementById("text2").innerHTML = ""
+  document.getElementById("text3").innerHTML= ""
+  document.getElementById("text4").innerHTML= ""
+  document.getElementById("text5").innerHTML = ""
+
+
+
+
+
+}
+
+
+
+
+
+
+function end () {
+
+  const msg = "you climb towards the light and finally see the blue skies above, in the far off distance you see your friends peering into the hole you fell into"
+  const msg2 = " Congrats you made It, to start over again press 'start' "
+
+
+
+}
+
+
+function failure () {
+
+alert('you dont think that would do anything')
+
+}
+
   
   
-  var character = {
-    type: "human",
-    weapon:"bow",
-    health:"100",
-    stats : function() {
-      return this.health + " " + this.weapon + " " + this.type
-    }
-    
-  }
+  
+  
+ 

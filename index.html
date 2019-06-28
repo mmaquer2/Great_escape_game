@@ -1,18 +1,68 @@
+<html>
 <head>
+
+<!--possible issues with using bootsrtap for some reason-->
+    <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+   <!--be sure to have the boostrap linke before the css style sheet or stuff won't work right-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src = "script.js"> </script>
+    
+    <title>The Great Escape </title>
+
   
-  </head>
+</head>
+
+<body>
+  <center>  
+      
+<div class = "game">
+ 
+    <h1>The Great Escape</h1>
+    <p>A text based puzzle game.</p>
   
-  <center>
-  <h1>The Great Escape</h1>
-    <p>A text based puzzle game by Mike Maquera.
+
+<br>
+<br>
+<div style = "padding:40px 40px; margin-right: 20px;margin-left: 20px;" class="nes-container with-title is-centered">
+<div class = "screen">
+
+
+  <h2 id= "intro">Press Any Button To Start</h2>
+
+  <p id= "text1">           </p>
   <br>
-    
-    
-    <button type="button" class="nes-btn" onclick="style.display = 'none',start()">Click to Start</button>
-    
-    
-  </center>
-  
-  
+  <p id = "text2">         </p>
+  <br>
+  <p id="text3">           </p>
+  <br>
+  <p id="text4">           </p>
+  <br>
+ <p id="text5">           </p>
+
+
+</div>
+</div>
+  <br></br>
+<button type="button" style="margin-right: 40px; padding: 20px 40px;"  class = "nes-btn" id = "a"  onclick = "start()">A</button> 
+<button type="button" id = "b" style ="padding: 20px 40px" class = "nes-btn" >B</button>
+<br></p>
+<button type="button" style="margin-right:40px;padding: 20px 40px" id = "select" class = "nes-btn" onclick="testb()">Select</button>
+<button type="button" id = "start" class = "nes-btn" style ="padding: 20px 40px;"onclick="part1()">Start</button>
+
+
+
+</div></center>
+
+
+<div class="zelda-fire"></div>
+<br>
+<br>
+
+<div class ="footer">
+
+  <p>Mike Maquera, 2019.</p>
+</div>
+
+</body> 
+</html>
