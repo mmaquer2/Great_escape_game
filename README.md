@@ -1,3 +1,3 @@
-# great_esacpe_game
+### The Great_Esacpe_Game
 - Text based puzzle game written in javascript, html and css
-- Design made with NES. css framework/
+- Design made with NES. css framework
