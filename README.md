@@ -1,5 +1,5 @@
-### The Great_Esacpe_Game
-- Text based puzzle game written in javascript, html and css
-- Design made with NES. css framework
+## Weather APP
 
-Live Demo at: https:// _____
+- Simple JavaScript based text game with the purpose of pracitcing front end design, CSS made using NES.css framework
+
+- Live demo can be seen at => () 

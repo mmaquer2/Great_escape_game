@@ -74,8 +74,8 @@ function part2 () {
 function right () {
 
 
-  document.getElementById("a").onclick = start();
-  document.getElementById("b").onclick = start() ;
+  document.getElementById("a").onclick = crossing;
+  document.getElementById("b").onclick = crossing;
 
 
   document.getElementById("text2").innerHTML = ""
@@ -85,8 +85,8 @@ function right () {
 
   const msg = "As you start to walk right away from the intersection the ceiling starts to shake and crumble you cannot return to the previous room"
   const msg2 = " you walk for five minutes along the dark hallway until you come upon a cavern spilt in the middle by a running stream"  
-  const msg3 = " the water is across"
-  const msg4 = " what do you do? A. b."
+  const msg3 = " you drop a stone in the water and it is clear all the way to the bottom. You could probalby swim across, however there is also a dead tree right next to you."
+  const msg4 = " what do you do? A. Push the tree over b. Swim across the pond"
     document.getElementById("text1").innerHTML = msg;
     document.getElementById("text2").innerHTML= msg2;
     document.getElementById("text3").innerHTML= msg3;
@@ -97,8 +97,8 @@ function right () {
 
 function left () {
 
-  document.getElementById("a").onclick = bridge();
-  document.getElementById("b").onclick = start() ;
+  document.getElementById("a").onclick = fire;
+  document.getElementById("b").onclick = fire;
 
 
   document.getElementById("text2").innerHTML = ""
@@ -108,8 +108,8 @@ function left () {
 
   const msg = "As you start to walk right away from the intersection the ceiling starts to shake and crumble you cannot return to the previous room"
   const msg2 = " you walk for five minutes then you come upon a room lit by a small campfire, besides the campfire there is with a pot by the fire"  
-  const msg3 = "You smell "
-  const msg4 = " what do you do? A. Grab the Pot B. "
+  const msg3 = "You smell something delcious originating from the cooking, your stomach growls are you remeber you havent eaten for days"
+  const msg4 = " what do you do? A. Grab the Pot and eat its contents B. bypass the pot  "
     document.getElementById("text1").innerHTML = msg;
     document.getElementById("text2").innerHTML= msg2;
     document.getElementById("text3").innerHTML= msg3;
@@ -119,17 +119,102 @@ function left () {
 }
 
 
-function bridge () {
+function fire () {
+//this bridges together both of the right and left paths 
 
-
-  document.getElementById("a").onclick = start();
-  document.getElementById("b").onclick = start() ;
-
+  document.getElementById("a").onclick = riddle;
+  document.getElementById("b").onclick = riddle ;
 
   document.getElementById("text2").innerHTML = ""
-  document.getElementById("text3").innerHTML= ""
-  document.getElementById("text4").innerHTML= ""
-  document.getElementById("text5").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
+
+const msg =" Right before you move "
+  const msg2 = "Out of nowhere a hodden figure appears "
+  const msg3= " He angirly shakes his fist at you as you attempt to turn away and run towards the exit"
+  const msg4 = " What do you do? a. run b. run faster  "
+
+  document.getElementById("text1").innerHTML = msg;
+  document.getElementById("text2").innerHTML= msg2;
+  document.getElementById("text3").innerHTML= msg3;
+  document.getElementById("text4").innerHTML= msg4;
+
+
+
+}
+
+function crossing () {
+  //this bridges together both of the right and left paths 
+  
+    document.getElementById("a").onclick = riddle;
+    document.getElementById("b").onclick = riddle ;
+  
+    document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
+  
+    const msg = " you cross the water quickly and walk carefuly toward the exit of the room "
+    const msg2 = "Out of nowhere a hodden figure appears blocking your way"
+    const msg3 = " He angirly shakes his fist at you as you attempt to push him out your way and run"
+    const msg4  = " What do you do? a. run b. run faster  "
+  
+    document.getElementById("text1").innerHTML = msg;
+    document.getElementById("text2").innerHTML= msg2;
+    document.getElementById("text3").innerHTML= msg3;
+    document.getElementById("text4").innerHTML= msg4;
+  
+  
+  
+  }
+
+function riddle () {
+
+  document.getElementById("a").onclick = correct;
+  document.getElementById("b").onclick = failure;
+
+  document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
+
+
+  const msg = " The hooded figure quickly catches up to you. He demands you answer his question "
+  const msg2 = " I'll say it again, what is known but very far. Close to home but not where you are"
+  const msg3= " answer correctly and ill let you go free"
+  const msg4 = "a. the past b. a pool of water "
+
+  document.getElementById("text1").innerHTML = msg;
+  document.getElementById("text2").innerHTML= msg2;
+  document.getElementById("text3").innerHTML= msg3;
+  document.getElementById("text4").innerHTML= msg4;
+
+
+}
+
+
+function correct () {
+
+  document.getElementById("a").onclick = end;
+  document.getElementById("b").onclick = failure ;
+
+  document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
+
+
+  const msg = " row 1"
+  const msg2= " row 2"
+  const msg3= " row 3"
+  const msg4 = "a. action 1 b. action 2 "
+
+  document.getElementById("text1").innerHTML = msg;
+  document.getElementById("text2").innerHTML= msg2;
+  document.getElementById("text3").innerHTML= msg3;
+  document.getElementById("text4").innerHTML= msg4;
+
 
 
 
@@ -139,13 +224,26 @@ function bridge () {
 
 
 
+function end() {
 
+  document.getElementById("start").onclick = start;
+  document.getElementById("start").onclick = start ;
 
-
-function end () {
+  document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
 
   const msg = "you climb towards the light and finally see the blue skies above, in the far off distance you see your friends peering into the hole you fell into"
   const msg2 = " Congrats you made It, to start over again press 'start' "
+
+
+  document.getElementById("text1").innerHTML = msg;
+  document.getElementById("text2").innerHTML= msg2;
+  document.getElementById("text3").innerHTML= msg3;
+  document.getElementById("text4").innerHTML= msg4;
+
+
 
 
 
@@ -154,7 +252,7 @@ function end () {
 
 function failure () {
 
-alert('you dont think that would do anything')
+alert ("you don't think that would do anything" )
 
 }
 
