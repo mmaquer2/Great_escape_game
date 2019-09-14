@@ -2,11 +2,18 @@
 
 function start () { 
 
-    document.getElementById("intro").innerHTML = "";
+    
     document.getElementById("a").onclick = part1;
     document.getElementById("b").onclick = part1;
     document.getElementById("select").onclick = part1;
     document.getElementById("start").onclick = part1;
+
+    document.getElementById("intro").innerHTML = "";
+    document.getElementById("text1").innerHTML = ""
+    document.getElementById("text2").innerHTML = ""
+    document.getElementById("text3").innerHTML= ""
+    document.getElementById("text4").innerHTML= ""
+    document.getElementById("text5").innerHTML = ""
    
     const msg = "Welcome to The Great Escape a text adventure by Mike Maquera"
     const msg2 = "The purpose of the game is simple: Esacpe the mysterious place you find yourself in. "
@@ -197,7 +204,7 @@ function riddle () {
 function correct () {
 
   document.getElementById("a").onclick = end;
-  document.getElementById("b").onclick = failure ;
+  document.getElementById("b").onclick = end;
 
   document.getElementById("text2").innerHTML = ""
     document.getElementById("text3").innerHTML= ""
@@ -205,10 +212,10 @@ function correct () {
     document.getElementById("text5").innerHTML = ""
 
 
-  const msg = " row 1"
-  const msg2= " row 2"
-  const msg3= " row 3"
-  const msg4 = "a. action 1 b. action 2 "
+  const msg = " The hooded figure looks at your disappointedly and says that is correct"
+  const msg2= " you walk past him and continue down the corridor and come to a dead end "
+  const msg3= " standing infront of you is a ladder going towards the cieling, what do you do?"
+  const msg4 = "a. climb  b. climb  "
 
   document.getElementById("text1").innerHTML = msg;
   document.getElementById("text2").innerHTML= msg2;
@@ -234,7 +241,7 @@ function end() {
     document.getElementById("text4").innerHTML= ""
     document.getElementById("text5").innerHTML = ""
 
-  const msg = "you climb towards the light and finally see the blue skies above, in the far off distance you see your friends peering into the hole you fell into"
+  const msg = "you climb quicker and quicker towards the light and finally see the blue skies above, in the far off distance you see your friends peering into the hole you fell into"
   const msg2 = " Congrats you made It, to start over again press 'start' "
 
 

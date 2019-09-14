@@ -1,0 +1,24 @@
+{
+  "name": "great_escp_game",
+  "version": "1.0.0",
+  "description": "- Simple JavaScript based text game with the purpose of pracitcing front end design, CSS made using NES.css framework",
+  "main": "script.js",
+  "dependencies": {
+    "surge": "^0.21.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "surge --domain gr8esacpegame-io.surge.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmaquer2/great_escape_game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmaquer2/great_escape_game/issues"
+  },
+  "homepage": "https://github.com/mmaquer2/great_escape_game#readme"
+}
